@@ -20,21 +20,33 @@
    2. 표기법
       - 코틀린은 Carmel Case를 주로 사용
       - `Carmel Case`: 낙타 표기법
-        > 첫글자 소문자로 단어바뀔 때 대문자로 시작
+        > 첫글자 소문자로 시작, 단어 바뀔 때 첫 글자를 대문자로 표기
         ```kotlin
             anyVariableName
         ```
       - `Pascal Case`: 파스칼 표기법
-        > 첫글자 대문자로 단어마다 구분
+        > 첫글자 대문자로 시작, 단어의 첫글자를 대문자로 표기
         ```kotlin
            AnyVariableName
         ```
       - `Snake Case`: 뱀 표기법
-        > 소문자로 쓰고 단어 구분을 _(언더바)
+        > 소문자로 쓰고 단어를 쓰고 단어마다 _(언더바)로 구분해 표기
         ```kotlin
            any_variable_name
         ```
    3. 키워드
-      - 코틀린 문법 상 정해놓은 단어
-      - ex) fun, var, val
-       
+      - 코틀린 문법 상 정해 놓은 단어를 키워드로 구분
+      - 키워드를 변수명으로 사용하면 안 됨
+      - ex) fun, var, val, Int, String ...
+
+## 004. LiteralDataType
+   1. `리터럴` 타입
+      - 리터럴 : 숫자 값 자체
+      - 리터럴의 타입 `생략 가능`
+      - 생략하더라도 자동으로 정수면 `정수 타입 적용`
+          ```kotlin
+              val variable = 10 + 12 - 5
+          ```
+          ```kotlin
+              val variable : Int = 10 + 12 - 5
+          ```
