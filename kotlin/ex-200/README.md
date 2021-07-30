@@ -206,10 +206,28 @@
 
             기호   | 사용 예   | 뜻
             :---: |  :---:  | ---
-            ==    | a == b  | 같으면 true, 다르면 false
-            !=    | a != b  | a와 b가 다르면 true, 같으면 false
-            \>     | a > b   | a가b보다 크면 true, 그렇지 않으면 false
-            <     | a < b   |a가b보다 작으면 true, 그렇지 않으면 false
-            >=    | a >= b  |a가b보다 크거나 같으면 true, 그렇지 않으면 false
-            <=    | a <= b  | a가b보다 작거나 같으면 true, 그렇지 않으면 false
+            ==    |  a == b | 같으면 true, 다르면 false
+            !=    |  a != b | a와 b가 다르면 true, 같으면 false
+            \>    |  a > b  | a가b보다 크면 true, 그렇지 않으면 false
+            <     |  a < b  | a가b보다 작으면 true, 그렇지 않으면 false
+            >=    |  a >= b | a가b보다 크거나 같으면 true, 그렇지 않으면 false
+            <=    |  a <= b | a가b보다 작거나 같으면 true, 그렇지 않으면 false
 
+## 018. LogicalOperator
+   1. 논리연산자
+        - 참과 거짓으로만 계산을 수행하는 연산자
+
+            기호   | 사용 예   | 뜻
+            :---: |  :---:  | ---
+            &&    | a && b  |  a와 b가 모두  true 일때 true 하나라도 false있으면 false
+            !     | !a      | a가 true면 결과값은 false, a가 false면 결과값은 true
+            
+            a \|\| b : a와 b중 하나라도 true면 true 둘다 false 여야 false
+           ```kotlin
+               val a2 = 10
+               var isTrue = 5 < a < 15 // 잘못된 코드
+               val isTrue = 5 < a &&  a < 15 // 동작하는 코드
+          ```
+          
+          `오류`
+          > The integer literal does not conform to the expected type Boolean(정수 리터럴이 예상되는 타입은 Boolean 을 따르지 않는다.)
