@@ -247,4 +247,9 @@
                 if( a > b)
                     println(a)
             ```               
-                                                                                                                                                                                                                                                                                                             
+            
+## 20. ExIfElse
+   1. If-else
+        - else :if문의 조건이 false일때 실행하는 문장
+        - if부터 else까지 하나의 문장으로 인식함
+                                                                                                                                                                                                                                                                                                 
