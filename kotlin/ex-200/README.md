@@ -197,3 +197,19 @@
               
               val num : Int; num = 15; println(num + 7 + 3)
         ```
+
+## 017. ComparisonOperator
+   1. 비교 연산자
+        - 두 피연산자를 비교하는 연산자
+        - 결과타입 : Boolean 타입 참(true)과 거짓(false)
+        - 객체 참조값 비교 : ===, !==
+
+            기호   | 사용 예   | 뜻
+            :---: |  :---:  | ---
+            ==    | a == b  | 같으면 true, 다르면 false
+            !=    | a != b  | a와 b가 다르면 true, 같으면 false
+            \>     | a > b   | a가b보다 크면 true, 그렇지 않으면 false
+            <     | a < b   |a가b보다 작으면 true, 그렇지 않으면 false
+            >=    | a >= b  |a가b보다 크거나 같으면 true, 그렇지 않으면 false
+            <=    | a <= b  | a가b보다 작거나 같으면 true, 그렇지 않으면 false
+
