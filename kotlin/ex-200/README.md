@@ -231,3 +231,20 @@
           
           `오류`
           > The integer literal does not conform to the expected type Boolean(정수 리터럴이 예상되는 타입은 Boolean 을 따르지 않는다.)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   > 
+## 019. ExIf
+   1. 조건문(if)
+        - `조건문` Boolean 타입 표현식
+        - 블록 : { }
+            - 여러개의 문장 담을 때 사용
+        - 조건이 참일때만 if문 안의 문장 실행
+        - if문에 속한 문장이 하나일때 중괄호 생략 가능
+            ```kotlin
+                if( a > b) {
+                    println(a)
+                }
+                // 중괄호 생략
+                if( a > b)
+                    println(a)
+            ```               
+                                                                                                                                                                                                                                                                                                             
