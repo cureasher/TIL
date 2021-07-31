@@ -58,11 +58,11 @@
         
         기호   | 결과   
         :---: | :----: 
-        +     | 더하기
-        -     | 빼기
-        *     | 곱하기
-        /     | 몫
-        %     | 나머지
+        \+     | 더하기
+        \-     | 빼기
+        \*     | 곱하기
+        \/     | 몫
+        \%     | 나머지
 
    2. 타입 변환
        - 정수형을 실수로 변환
@@ -179,7 +179,7 @@
 ## 015. AssignmentOperator
    1. 배정 연산자(`=`)
         - 변수에 값을 저장할 때 사용하는 연산자
-        - 배정연산자와 일반연산자(`줄여 쓸 수 있`)
+        - 배정연산자와 일반연산자(`줄여 쓸 수 있음`)
            > a=a+3 -> a+=3
 
 ## 016. Statement
@@ -208,9 +208,9 @@
             :---: |  :---:  | ---
             ==    |  a == b | 같으면 true, 다르면 false
             !=    |  a != b | a와 b가 다르면 true, 같으면 false
-            \>    |  a > b  | a가b보다 크면 true, 그렇지 않으면 false
+            \>    |  a \> b | a가b보다 크면 true, 그렇지 않으면 false
             <     |  a < b  | a가b보다 작으면 true, 그렇지 않으면 false
-            >=    |  a >= b | a가b보다 크거나 같으면 true, 그렇지 않으면 false
+            \>=   | a \>= b | a가b보다 크거나 같으면 true, 그렇지 않으면 false
             <=    |  a <= b | a가b보다 작거나 같으면 true, 그렇지 않으면 false
 
 ## 018. LogicalOperator
@@ -219,7 +219,7 @@
 
             기호   | 사용 예   | 뜻
             :---: |  :---:  | ---
-            &&    | a && b  |  a와 b가 모두  true 일때 true 하나라도 false있으면 false
+            &&    | a && b  | a와 b가 모두  true 일때 true 하나라도 false있으면 false
             !     | !a      | a가 true면 결과값은 false, a가 false면 결과값은 true
             
             a \|\| b : a와 b중 하나라도 true면 true 둘다 false 여야 false
@@ -248,8 +248,12 @@
                     println(a)
             ```               
             
-## 20. ExIfElse
+## 020. ExIfElse
    1. If-else
         - else :if문의 조건이 false일때 실행하는 문장
         - if부터 else까지 하나의 문장으로 인식함
-                                                                                                                                                                                                                                                                                                 
+
+## 021. GradeIfElse
+   1. if와 else문의 중첩
+        - if문 안에 또 다른 is-else문을 넣을수 있음.
+        - else 문에 if를 붙여서 축약 가능
