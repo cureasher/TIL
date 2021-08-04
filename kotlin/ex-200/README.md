@@ -616,4 +616,14 @@
        - 슈퍼클래스는 항상 슈퍼클래스 자체나 서브클래스 인스턴스만 가리킴
        - error: Unresolved reference: date
        
+## 066. FruitOverriding
+   1. `오버라이딩`
+        - 슈퍼클래스와 서브클래스의 멤버함수가 동일하면 동작을 덮어쓰는 것
+        - 오버라이딩 허용하려면 함수 앞에 `open` 키워드 필요
+        - 오버라이딩 사용시 함수 앞에 `override` 키워드 필요
+        - `super` 키워드 : 슈퍼클래스 이름을 나타냄
+        - `final` 키워드 : 더이상 오버라이딩 할수 없게 됨
+            > 오버라이딩 하려고 하면 에러 발생 'func' in 'Fruit' is final and cannot be overridden
+
+        
         
