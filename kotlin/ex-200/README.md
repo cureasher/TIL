@@ -680,3 +680,11 @@
         - 어떠한 타입과도 호환
         - throw를 표현식으로 쓸 수 있기 위한 장치
         
+## 075. NullableAndNull
+   1. `Nullable`
+        - null 값을 지정할 수 있는 변수
+   2. `null`
+        - 참조 변수가 어떠한 객체가 없음을 나타냄
+        - Byte, Short, Int, Long, Float, Double, Char, Boolean 타입 뒤에 ?를 붙이면 그 변수는 참조변수가 됨
+        - 코틀린은 Nullabe타입 아니면 null을 지정 못함
+        
