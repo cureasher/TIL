@@ -673,3 +673,10 @@
         ```
         - `throw` 키워드 필수가 아니고 옵션
 
+## 074. NothingType
+   1. Nothing 타입
+        - 실행 흐름이 도달할 수 없는 구역을 나타내기 위한 특수타입
+        - throw Exception() 표현식 Nothing 타입을 갖음
+        - 어떠한 타입과도 호환
+        - throw를 표현식으로 쓸 수 있기 위한 장치
+        
