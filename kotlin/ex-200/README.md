@@ -687,4 +687,9 @@
         - 참조 변수가 어떠한 객체가 없음을 나타냄
         - Byte, Short, Int, Long, Float, Double, Char, Boolean 타입 뒤에 ?를 붙이면 그 변수는 참조변수가 됨
         - 코틀린은 Nullabe타입 아니면 null을 지정 못함
-        
+
+## 076. SafeCallOperator
+   1. 안전한 호출 연산자(?)
+        - Nullable한 참조 변수의 프로퍼티와 멤버 함수에 접근하려면 ?연산자 사용
+        - null 값에 안전한 연산자
+                
