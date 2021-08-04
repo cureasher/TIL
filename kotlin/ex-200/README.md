@@ -576,7 +576,7 @@
         - 인수 개수 자유
         - 인수 생략 가능
         
-## 62. InOperator 
+## 062. InOperator 
    1. `in` 연산자
         - 어떤 값이 객체에 포함되어 있는지 조사하는 연산자
         - `in` : 포함하면 true, 포함안하면 false
@@ -584,3 +584,13 @@
         - 반환값은 Boolean 형으로 true, false가 출력됨
         - operator fun `contains` 멤버 함수로 오버로딩 가능
 
+## 63. InfixNotation 
+   1. 중위표기법
+        - 피연산자 연산자 피연산자의 순서로 표현식을 구성하는 방식
+        - 매개변수가 하나면 함수호출 중위표기 사용 가능
+        - 함수 선언문 앞에 `infix` 붙여야 함
+        - `from`멤버함수 : 중위 표기법 호출
+        ```kotlin
+              val minus = Minus(3, 6) from Minus(1, 1)
+              val minus = Minus(3, 6).from(Minus(1, 1)) // 결과동일함
+        ```  
