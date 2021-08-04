@@ -693,3 +693,8 @@
         - Nullable한 참조 변수의 프로퍼티와 멤버 함수에 접근하려면 ?연산자 사용
         - null 값에 안전한 연산자
                 
+## 077. NotNull
+   1. Not-null 단정 연산자(!!)
+        - Nullable 타입을 Not-null타입으로 강제 캐스팅
+        - null이 있으면 KotlinNullPointerException 예외 발생
+        
