@@ -625,5 +625,9 @@
         - `final` 키워드 : 더이상 오버라이딩 할수 없게 됨
             > 오버라이딩 하려고 하면 에러 발생 'func' in 'Fruit' is final and cannot be overridden
 
-        
+## 067. OverridingProperty
+   1. 프로퍼티 오버라이딩
+        - 프로퍼티 앞에 `open` 키워드 필요
+        - 사용시 함수 앞에 `override` 키워드 필요
+        - 슈퍼클래스에서 val 선언한 프로퍼티를 var로 오버라이딩 가능
         
