@@ -698,3 +698,9 @@
         - Nullable 타입을 Not-null타입으로 강제 캐스팅
         - null이 있으면 KotlinNullPointerException 예외 발생
         
+## 078. ElvisOperator
+   1. 엘비스 연산자 ?:
+        - 왼쪽의 피연산자가
+            - null이 아니면 그 값을 그대로 사용
+            - null이면 우측의 피연산자로 대체됨
+        
