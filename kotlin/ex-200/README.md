@@ -576,5 +576,11 @@
         - 인수 개수 자유
         - 인수 생략 가능
         
-
+## 62. InOperator 
+   1. `in` 연산자
+        - 어떤 값이 객체에 포함되어 있는지 조사하는 연산자
+        - `in` : 포함하면 true, 포함안하면 false
+        - `!in` : 포함안하면 true, 포함하면 false
+        - 반환값은 Boolean 형으로 true, false가 출력됨
+        - operator fun `contains` 멤버 함수로 오버로딩 가능
 
