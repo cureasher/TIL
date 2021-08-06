@@ -763,3 +763,17 @@
         - 확장함수와 비슷함
         - 함수이름 앞에 함수를 주입할 클래스 : 리시버 타입
         - 함수와 다른점은 프로퍼티이기에 소괄호를 쓰지 않음
+        
+## 088. ObjectDeclaration
+   1. 객체 선언
+        - 클래스 선언 형태와 비슷
+        - 공유할 수 있는 하나뿐인 객체 필요할 때가 있음
+        - 객체는 open 키워드를 붙일 수 없음
+   2. 객체 접근 방법
+   ```kotlin
+        Person.name = "Singleton"
+        var person:Person = Person
+        println(person.name)
+   ```
+        
+## 089. 
