@@ -860,5 +860,17 @@
         - OuterClass.Inner로 인스턴스에 접근
         - this@OuterClass 키워드 : 바깥 클래스 인스턴스에 접근
 
+## 101. DataClass
+   1. `데이터 클래스`
+        - `data` 키워드
+        - 클래스 앞에 data를 붙임
+        - 데이터에 특화된 클래스
+        - 적어도 하나의 프로퍼티를 가져야 함
+        - 생성자 매개변수에 var, val 같이 써야 함
+        - equals, hashCode, toString 멤버함수가 자동으로 오버라이딩 됨
+        - abstract, open, sealed, inner 키워드 사용 못함
+        
+
+        
 
         
