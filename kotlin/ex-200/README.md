@@ -870,7 +870,11 @@
         - equals, hashCode, toString 멤버함수가 자동으로 오버라이딩 됨
         - abstract, open, sealed, inner 키워드 사용 못함
         
+## 102. DestructuringObject
+   1. `객체 분해하기`
+        - 사용되지 않는 변수는 언더스코어(_)를 쓰면 무시 가능
+        - 데이터클래스의 필요한 부분만 추출 가능
 
-        
+  
 
         
