@@ -965,7 +965,7 @@
         - A..Z
         - A.ragneTo('Z')
         
-## 118. Iterator
+## 118. OneToThreeIterator
    1. `반복자`
         - 특정 구간 속에 있는 원소를 하나씩 반복적으로 꺼내기 위한 인터페이스
         - Iterator: 코틀린의 기본적인 인터페이스
@@ -973,3 +973,10 @@
             - next() : 다음 원소가 있으면 반환 후 출력
             - hasNext() : 다음 원소가 있는지 true, falsef로 반환 함
             
+## 119. OneToTenForIterator
+   1. `for` 
+        - 반복문
+        - 타입 생략 가능
+        - 형태
+            for (변수 이름: 타입, in 표현식)
+
