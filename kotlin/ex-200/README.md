@@ -1017,4 +1017,10 @@
             - ordinal: Int
             - valueOf(value: String)
             - values()
-                                                                           
+
+## 125. SealedClass
+   1. `sealed` 클래스
+        - 자신의 중첩 클래스에만 상속을 허용하는 클래스
+        - 1.1 버전 이후 sealed 클래스와 같은 파일에 있는 경우도 상속 가능
+
+                                      
