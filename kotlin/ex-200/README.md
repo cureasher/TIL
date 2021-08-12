@@ -1010,4 +1010,11 @@
         - 열거 클래스의 프로퍼티, 멤버함수
             - 열거 상수 나열문보다 뒤에 와야 함
         
-                                                                                           
+## 124. EnumClassFunctionProperty
+   1. 열거클래스 활용
+        - 기본 함수와 프로퍼티
+            - name: String
+            - ordinal: Int
+            - valueOf(value: String)
+            - values()
+                                                                           
