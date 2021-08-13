@@ -1053,3 +1053,10 @@
         - 인터페이스를 이용해 클래스 인스턴스끼리 비교하는 기능
         - 매개변수 T를 받고 연산자 멤버 함수 `comparTo`함수 사용
         
+## 132. ClosedRange
+   1. 닫힌 구간 표현하는 인터페이스(`CloseRange`)
+        - 타입 매개변수로 Comparable<T> 구현 타입만 받음
+        - `start`: 최소값
+        - `endInclusive`: 최대값
+        - `contains`: in연산자 지원
+        - `isEmpty`: 비어있는지 확인
