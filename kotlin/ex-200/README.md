@@ -1048,3 +1048,8 @@
         - 제네릭으로 세 가지 타입을 보관
         - 사용하지 않은 값은 `_`로 무시
         
+## 131. ComparableInterface
+   1. `Comparable Interface`
+        - 인터페이스를 이용해 클래스 인스턴스끼리 비교하는 기능
+        - 매개변수 T를 받고 연산자 멤버 함수 `comparTo`함수 사용
+        
