@@ -1067,5 +1067,14 @@
         - 종류 
             - IntProgression
             - LongProgression
-            - CharPRogression
-            
+            - CharProgression
+## 134. ProgressionAndBuiltInFunction
+   1. `프로그래션 관련 함수`
+        - 코틀린에 내장된 Progression 타입
+        - Progression step은 항상 양수
+        - 0, 음수는 예외 발생(IllegalArgumentException)
+        - `downTo`: 역순으로 진행하는 Progression
+        - `reversed()` : Progression 뒤집는 역할
+        - `step` : Progression 진행할 스탭수
+        - `until`: 시작, 끝으로 진행하는 함수(1 감소해서 나옴)
+        
