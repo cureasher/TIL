@@ -1060,3 +1060,12 @@
         - `endInclusive`: 최대값
         - `contains`: in연산자 지원
         - `isEmpty`: 비어있는지 확인
+        
+## 133. IterableInterface
+   1. Iterable 인터페이스
+        - 클래스가 반복자 지원하도 만들어줌
+        - 종류 
+            - IntProgression
+            - LongProgression
+            - CharPRogression
+            
