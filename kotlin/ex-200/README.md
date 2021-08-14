@@ -1106,5 +1106,17 @@
             - containsAll()
                 > 원소들이 컬렉션에 모두 포함되어 있는지 여부 반환
 
+## 137. ListInterfaceAndMember
+   1. List 인터페이스
+        - 추상 멤버함수
+            - `get()`
+                > List의 index 번째 원소 반환
+            - `indexOf()`
+                > List의 몇번째 인덱스에 위치해있는지 반환 
+            - `lastIndexOf()`
+                > 마지막으로 일치하는 원소의 인덱스 반환
+            - `listIterator()`
+                > List에 특화된 Iterator를 반환
+            - `subList()`
+                > 구간의 원소를 뽑아 새로운 List를 만들어 반환
 
-                               
