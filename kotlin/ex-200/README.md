@@ -1093,3 +1093,18 @@
         - 키와 값을 1:1 대응 시켜 저장
         - 중복 안됨
    
+## 136. CollectionInterfacePropertyMember
+   1. Collection 인터페이스
+        - 추상 프로퍼티
+            - size
+                > 컬렉션 원소의 개수를 갖는 프로퍼티
+        - 멤버함수
+            - isEmpty()
+                > 비어있는지 여부를 반환함
+            - contains()
+                > 원소가 컬렉션에 포함되어 있는지 여부 반환 
+            - containsAll()
+                > 원소들이 컬렉션에 모두 포함되어 있는지 여부 반환
+
+
+                               
