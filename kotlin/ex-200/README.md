@@ -1184,13 +1184,20 @@
 ## 142. MutableListInterface
    1. MutableList 인터페이스
         - 멤버
-            - add
+            - `add()`
                 > index 위치에 element 추가
-            - addAll 
+            - `addAll()`
                 > index 위치에 elements 컬렉션에 있는 모든 원소 추가 
-            - set
+            - `set()`
                 > index 위치의 원소를 element로 교체
-            - removeAt
+            - `removeAt()`
                 > index번째 원소를 삭제
 
+# 143. MutableListIterator
+   1. MutableListIterator
+        - 멤버
+            - `set()`
+                > 커서가 가리키는 위치의 원소를 element로 교체
+            - `add()`
+                > 커서가 가리키는 위치 element 추가
 
