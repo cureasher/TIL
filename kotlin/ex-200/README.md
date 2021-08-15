@@ -1175,4 +1175,10 @@
             - `clear()`
                 > 컬렉션 모든 원소 삭제           
 
+## 141. MutableIterator
+   1. MutableIterator 인터페이스 
+        - 멤버
+            - `remove()`
+                > 커서가 가리키고 있는 원소 삭제  
 
+ 
