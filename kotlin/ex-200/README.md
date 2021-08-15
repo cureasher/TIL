@@ -1120,3 +1120,13 @@
             - `subList()`
                 > 구간의 원소를 뽑아 새로운 List를 만들어 반환
 
+## 138. ListIterator
+   1. ListIterator
+        - hasPrevious()
+            > 이전 원소가 존재하는지 여부 반환
+        - previous()
+            > 이전 원소를 반환하고 ListIterator 커서를 뒤로 한칸 옮김
+        - nextIndex()
+            > 다음 원소의 인덱스를 반환. 커서를 옮기진 않음
+        - previousIndex()
+            > 이전 원소의 인덱스를 반환. 커서를 옮기진 않음 
