@@ -1122,11 +1122,36 @@
 
 ## 138. ListIterator
    1. ListIterator
-        - hasPrevious()
+        - `hasPrevious()`
             > 이전 원소가 존재하는지 여부 반환
-        - previous()
+        - `previous()`
             > 이전 원소를 반환하고 ListIterator 커서를 뒤로 한칸 옮김
-        - nextIndex()
+        - `nextIndex()`
             > 다음 원소의 인덱스를 반환. 커서를 옮기진 않음
-        - previousIndex()
+        - `previousIndex()`
             > 이전 원소의 인덱스를 반환. 커서를 옮기진 않음 
+
+## 139. MapInterface
+   1. Map
+        - `Entry`
+            - 키와 값 한쌍을 표현하는 중첩 인터페이스
+        - `size`
+            - Map에 들어있는 키와 값 쌍의 개수를 갖는 프로퍼티
+        - `keys`
+            - Map의 키들만 갖는 프로퍼티(중복안됨. Set타입)
+        - `values`
+            - Map의 값들만 갖는 프로퍼티(값은 중복 가능, Collection타입)
+        - `entries`
+            - Map에 들어있는 모든 키와 값 쌍을 갖는 프로퍼티
+        - `isEmpty`
+            - Map이 비어있는지 여부 반환
+        - `containsKey`
+            - Map에 key에 해당하는 키가 들어있는지 여부 반환
+        - `containsValue`
+            - Map에 value에 해당하는 값이 들어있는 여부 반환
+        - `get`
+            - key에 해당하는 값을 반환하는 연산자, key에 해당하는 값 없으면 null 반환
+        - `getOrDefault`
+            - key에 해당하는 값을 반환하되 없으면 defaultValue 대신 반환
+
+
