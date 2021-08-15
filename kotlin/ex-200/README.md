@@ -1181,4 +1181,16 @@
             - `remove()`
                 > 커서가 가리키고 있는 원소 삭제  
 
- 
+## 142. MutableListInterface
+   1. MutableList 인터페이스
+        - 멤버
+            - add
+                > index 위치에 element 추가
+            - addAll 
+                > index 위치에 elements 컬렉션에 있는 모든 원소 추가 
+            - set
+                > index 위치의 원소를 element로 교체
+            - removeAt
+                > index번째 원소를 삭제
+
+
