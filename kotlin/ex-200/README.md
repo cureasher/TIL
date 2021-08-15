@@ -1154,4 +1154,25 @@
         - `getOrDefault`
             - key에 해당하는 값을 반환하되 없으면 defaultValue 대신 반환
 
+## 140. MutableCollection
+   1. `MutableCollection`
+        - 컬렉션에 값을 추가하거나 삭제할 수 있음
+        - 컬렉션을 반드시 수정해야할 상황이 아니면 Mutable이 아닌 일반 Collection 쓸것을 권장 
+        
+   2. MutableCollection 인터페이스
+        - Collections, MutableIterator 인터페이스 상속 
+        - 멤버
+            - `add()`
+                > 컬렉션에 elements 원소 추
+            - `addAll()`
+                > elements 컬렉션의 모든 원소를 컬렉션에 추가
+            - `remove()`
+                > 컬렉션의 element와 일치하는 원소 하나 제거 
+            - `removeAll()`
+                > 컬렉션의 element와 일치하는 모든 원소 제거 
+            - `retainAll()`
+                > elements 컬렉션의 원소와 일치하는 원소만 남기고 남은 원소 제거
+            - `clear()`
+                > 컬렉션 모든 원소 삭제           
+
 
