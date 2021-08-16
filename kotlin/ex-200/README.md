@@ -1246,3 +1246,17 @@
         - `mapNotNull`
             - 변환 함수가 null인경우 결과에서 제외
 
+## 148. CollectionFilter
+   1. CollectionFilter
+        - Collection에서 원하는 원소만 걸러내는 방법
+        - 멤버
+            - `filter`
+                - 함수에 true인 값만 반환
+            - `filterNot`
+                - 함수가 false인 값만 반환
+            - `filterNotNull`
+                - null이 아닌 원소만 반환
+            - `filterIndexed`
+                - index 매개변수를 추가한 것 조건에 맞는 값 반환
+            - `filterIsInstance`
+                - 지정한 타입에 맞는 원소만 반환
