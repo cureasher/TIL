@@ -1209,4 +1209,21 @@
         - `set.addAll()`
             - 2개 element를 추가할 경우 추가된 원소가 1개라도 있으면 `true` 반환
         - set은 원소의 `순서를 가지지 않음`
-        
+
+## 145. MutableMapInterface
+   1. `MutableMap`
+        - 수정이 가능한 `Map`
+        - 멤버
+            - `put()`
+                - MutableMap에 키와 값 한쌍을 추가하고 null반환
+                - key와 동일한 key가 있는 경우 값만 교체하고 이전 값 반환
+            - `remove()`
+                - key와 연결된 값 삭제
+                - 연관된 경우 삭제된 값 반환
+                - 연관된 값 없는 경우 null 반환
+            - `putAll()`
+                - from에 있는 모든 키와 값 쌍을 추가
+                - 키가 존재하는 경우 값만 변경
+            - `clear()`
+                - 모든 키와 값 쌍 삭제
+                
