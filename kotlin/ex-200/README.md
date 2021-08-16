@@ -1235,3 +1235,14 @@
         - `size`, `length` 프로퍼티 없음
         - itrator 연산 가능
         
+## 147. CollectionMap
+   1. `CollectionMap`
+        - `map`
+            - 타입의 변환 함수를 인수로 받음(ex-Int-> Char))
+        - `mapIndexd`
+            - 변환 함수에 index 매개변수 추가한 것
+        - `IntRange`
+            - 선언과 동시에 초기화
+        - `mapNotNull`
+            - 변환 함수가 null인경우 결과에서 제외
+
