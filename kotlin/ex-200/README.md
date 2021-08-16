@@ -1193,7 +1193,7 @@
             - `removeAt()`
                 > index번째 원소를 삭제
 
-# 143. MutableListIterator
+## 143. MutableListIterator
    1. MutableListIterator
         - 멤버
             - `set()`
@@ -1201,3 +1201,12 @@
             - `add()`
                 > 커서가 가리키는 위치 element 추가
 
+## 144. MutableSetInterface
+   1. `MutableSet`
+        - 수정이 가능한 `Set`
+        - `set.add()`
+            - 이미 존재하는 경우 추가되지 않고 `false` 반환
+        - `set.addAll()`
+            - 2개 element를 추가할 경우 추가된 원소가 1개라도 있으면 `true` 반환
+        - set은 원소의 `순서를 가지지 않음`
+        
