@@ -1280,3 +1280,17 @@
             - `subSequence()`
                 - 구간의 문자열을 뽑아 새 문자열을 반환
                 
+## 151. CharSequencePrefixSuffix
+   1. CharSequence 확장함수 
+        - 멤버
+            - `startsWith()`
+                - 문자열이 지정한 prefix로 시작하면 true, 아니면 false 반환
+            - `endsWith()`
+                - 문자열이 지정한 suffix로 끝나면 true, 아니면 false 반환 
+            - `removePrefix()`
+                - 문자열이 지정한 Prefix로 시작하는 문자열 잘라내고 반환 
+            - `removeSuffix()`
+                - 문자열이 지정한 Suffix로 끝나는 문자열 잘라내고 반환 
+            - `removeSurriounding()`
+                - prefix로 시작하고 suffix로 끝나는 문자열 반환
+
