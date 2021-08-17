@@ -1260,3 +1260,12 @@
                 - index 매개변수를 추가한 것 조건에 맞는 값 반환
             - `filterIsInstance`
                 - 지정한 타입에 맞는 원소만 반환
+                
+## 149. CollectionSort
+   1. CollectionSort
+        - 내장된 확장 함수를 이용해 정렬할 수 있음
+        - `sorted()`
+            - 오름차순 정렬
+        - `sortedDescending()`
+            - 내림차순 정렬
+
