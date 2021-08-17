@@ -1269,3 +1269,14 @@
         - `sortedDescending()`
             - 내림차순 정렬
 
+## 150. CharSequence
+   1. CharSequenceInterface
+        - String, StringBuilder 등 문자열과 관련된 클래스들이 구현하는 기본적인 뼈대 인터페이스 
+        - 멤버
+            - `length()`
+                - 문자열의 길이, 문자의 개수를 알 수 있음 
+            - `get()`
+                - 문자열의 문자 하나를 []연산자로 접근할 때 사용
+            - `subSequence()`
+                - 구간의 문자열을 뽑아 새 문자열을 반환
+                
