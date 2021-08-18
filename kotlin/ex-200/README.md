@@ -1306,3 +1306,23 @@
             - `isNullOfBlank()`
                 - 문자열이 null이거나 공백 문자로 이루어져 있는지 여부 반
 
+## 153. CharSequenceProcess
+   1. CharSequence 가공
+        - 가공하는 확장 함수
+            - `removeRange()`
+                - 지정한 범위의 문자들을 제거한 문자열 반환
+            - `padStart()`
+                - 문자열 길이를 늘린뒤 앞부분의 빈 공간을 padChar로 채운 문자열 반환
+            - `padEnd()`
+                - 문자열 길이를 늘린뒤 뒷부분의 빈 공간을 padChar로 채운 문자열 반환
+            - `trimStart()`
+                - 문자열 앞부분의 공백문자를 없앤 문자열 반환
+            - `trimEnd()`
+                - 문자열 앞부분의 공백문자를 없앤 문자열 반환
+            - `trim()`
+                - 문자열 앞뒤의 공백문자를 없앤 문자열 반환
+            - `slice()`, `subSequence()`
+                - 문자열 범위를 잘라낸 뒤 반환
+            - `reversed()`
+                - 문자들을 거꾸로 뒤집은 문자열 반환
+                
