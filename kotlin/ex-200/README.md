@@ -1294,3 +1294,15 @@
             - `removeSurriounding()`
                 - prefix로 시작하고 suffix로 끝나는 문자열 반환
 
+## 152. CharSequenceEmpty
+   1. CharSequence 비어있는지 확인
+        - 비어있는지 검사하는 확장 함수
+            - `isEmpty()`
+                - 문자열이 비어 있는 여부 반환
+            - `isBlnank()`
+                - 문자열이 비어 있거나 공백 문자로 이루어져 있는지 여부 반환
+            - `isNullOrEmpty()`
+                - 문자열이 null이거나 비어 있는지 여부 반환
+            - `isNullOfBlank()`
+                - 문자열이 null이거나 공백 문자로 이루어져 있는지 여부 반
+
