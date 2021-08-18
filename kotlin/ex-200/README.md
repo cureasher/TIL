@@ -1336,3 +1336,26 @@
             - `split()`
                 - 문자열 쪼갤 구분자(delimiters)로 최대 몇조각(limit) 쪼갤지 지정
                 
+## 155. StringClassMember
+   1. String 클래스
+        - String 클래스는 + 연산이 가능하다는 점 빼고는 CharSequence와 거의 기능이 동일함
+            - `plus()`
+                - String끼리 + 연산자 사용 가능
+        - 비교 연산자
+            - 연산 문자열의 길이로 비교
+            - 길이가 같을 경우 첫 글자부터 `유니코드` 순서로 비교
+
+## 156. AdageStringReplace
+   1. StringReplace
+        - 문자열 찾아바꾸기
+        - 멤버
+            - `replace()`
+                - 문자열을 교체하는 함수
+                - `ignoreCase`: 대소문자 무시 옵션 
+            - `replaceFirst()`
+                - oldValue 첫번째 문자열을 newValue로 교체 
+            - `replaceRange()`
+                - 지정한 범위 문자열을 `replacement`로 교체
+
+
+            
