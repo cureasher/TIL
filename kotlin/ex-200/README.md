@@ -1326,3 +1326,13 @@
             - `reversed()`
                 - 문자들을 거꾸로 뒤집은 문자열 반환
                 
+## 154. CharSequenceSplit
+   1. CharSequenceSplit 함수
+        - 문자열을 여러 조각으로 쪼개는 확장 함수
+            - `lines()`
+                - 개행문자 \\n을 기준으로 문자열을 쪼개 List<String> 타입으로 반환
+            - `lineSequence()`
+                - 개행문자 \\n을 기준으로 문자열을 쪼개 Sequence<String> 타입으로 반환
+            - `split()`
+                - 문자열 쪼갤 구분자(delimiters)로 최대 몇조각(limit) 쪼갤지 지정
+                
