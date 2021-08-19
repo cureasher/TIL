@@ -1357,5 +1357,14 @@
             - `replaceRange()`
                 - 지정한 범위 문자열을 `replacement`로 교체
 
+## 157. StringBuilder
+   1. StringBuilder
+        - 문자열을 추가할 때 String처럼 문자열을 매번 생성하지 않고 기존 문자열에 덧붙이는 동작
+        - 멤버
+            - `append()`
+                - StringBuilder 자기 자신을 반환, 연쇄적 호출 가능
+            - `toString()`
+                - StringBuilder에 완성된 최종 문자열 얻을 수 있음
+                
 
             
