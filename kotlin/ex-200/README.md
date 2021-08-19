@@ -1377,5 +1377,10 @@
             - `replace()`
                 - input중 정규식에 매칭되는 부분 replacement로 치환
 
+## 159. ToListExtendFunction
+   1. `toList`
+        - 여러가지 타입을 List 타입으로 변환하는 확장 함수
+        - Pair, Triple, Iterable 외 수많은 타입을 리시버로 함
+        
 
             
