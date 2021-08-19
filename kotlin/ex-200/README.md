@@ -1357,7 +1357,7 @@
             - `replaceRange()`
                 - 지정한 범위 문자열을 `replacement`로 교체
 
-## 157. StringBuilder
+## 157. StringBuilderClass
    1. StringBuilder
         - 문자열을 추가할 때 String처럼 문자열을 매번 생성하지 않고 기존 문자열에 덧붙이는 동작
         - 멤버
@@ -1366,5 +1366,16 @@
             - `toString()`
                 - StringBuilder에 완성된 최종 문자열 얻을 수 있음
                 
+## 158. RegexClass
+   1. Regx
+        - 코틀린 정규식 클래스
+        - 멤버
+            - `constructor()`
+                - 정규식 패턴 담긴 문자열 받는 생성자
+            - `matches()`
+                - input이 정규식에 매칭되는지 여부 반환
+            - `replace()`
+                - input중 정규식에 매칭되는 부분 replacement로 치환
+
 
             
