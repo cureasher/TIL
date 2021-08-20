@@ -1382,5 +1382,8 @@
         - 여러가지 타입을 List 타입으로 변환하는 확장 함수
         - Pair, Triple, Iterable 외 수많은 타입을 리시버로 함
         
-
-            
+## 160. RunExtendFunction
+   1. `run` 함수
+        - 모든 타입에 적용할 수 있음
+        - `this`
+            - 값을 가리킴
