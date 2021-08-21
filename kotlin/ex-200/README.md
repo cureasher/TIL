@@ -1440,3 +1440,15 @@
    2. `min()`
         - 최소값 함수
         - 두 수의 최소값 반환
+        
+## 169. CeilFloorRoundFunction
+   1. `ceil()`
+        - 실수값을 올림하는 함수
+   2. `floor()`
+        - 실수값을 내림하는 함수
+   3. `round()`
+        - 실수값을 반올림하는 함수
+   4. `roundToInt()`
+        - 실수값을 Int타입으로 반올림하는 함수
+   5. `roundToLong()`
+        - 실수값을 Long타입으로 반올림하는 함수
