@@ -1497,3 +1497,20 @@
             - `in1p()`
                 - log_e (x+1)
                 
+## 175. TrigonometricFunction
+   1. 삼각함수
+        - 삼각비 계산을 위한 함수
+        - 함수
+            - sin()
+            - cos()
+            - tan()
+            - asin()
+            - acos()
+            - atan()
+            - sinh()
+            - cosh()
+            - tanh()
+            - asinh()
+            - acosh()
+            - atanh()
+        
