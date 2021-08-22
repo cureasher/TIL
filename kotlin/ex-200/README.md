@@ -1483,4 +1483,17 @@
         - `expm1()`
             - e^x -1 값 반환
 
-
+## 174. LogarithmicFunction
+   1. 로그함수
+        - 로그 계산을 위한 함수
+            - `log()`
+                - log_base x
+            - `log2()`
+                - log_2 x
+            - `log10()`
+                - log_10 x
+            - `in()`
+                - log_e x
+            - `in1p()`
+                - log_e (x+1)
+                
