@@ -1471,3 +1471,16 @@
         - hypotenuse(빗변)의 약자
         - 빗변의 길이를 구하는데 사용
                 
+## 173. ExponentialFunction
+   1. 지수함수
+        - `sqrt()`
+            - squar root(제곱근)의 약자 루트x 반환
+        - `pow()`
+            - 리시버의 x 제곱을 반환하는 확장함
+            - infix 선언되어 있지 않아 연산자처럼 사용 못함
+        - `exp()`
+            - e^x값 반환
+        - `expm1()`
+            - e^x -1 값 반환
+
+
