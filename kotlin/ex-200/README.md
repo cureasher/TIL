@@ -1527,4 +1527,9 @@
         - `Any?.toString()`
             - null인 표현식도 호출가능해짐
 
+## 179. NullStringPlus
+   1. `String?.plus`
+        - null 타입인 표현식에 `+` 연산자 사용 가능
+
+
             
