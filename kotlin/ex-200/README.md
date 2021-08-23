@@ -1544,3 +1544,14 @@
             - `isFinite()`
                 - 리시버에 들어 있는 값이 정상이면 true, 아니면 false
             
+## 181. VerifyValue
+   1. Argument 검증
+        - `checkNotNull()`
+            - 인수 값이 null이면 IllegalStateException 예외, null이 아니면 Non-null 타입으로 캐스팅하여 그대로 반환
+        - `check()`
+            - 인수 값이 false면 IllegalStateException 예외
+        - `requireNotNull()`
+            - 인수 값이 null면 IllegalArgumentException 예외, null이 아니면 Non-null 타입으로 캐스팅하여 그대로 반환
+        - `require()`
+            - 인수 값이 false면 IllegalArgumentException 예외
+            
