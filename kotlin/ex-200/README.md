@@ -1514,9 +1514,12 @@
             - `acosh()`
             - `atanh()`
         
-## 176. RealNuberToBinary
+## 176. RealNumberToBinary
    1. `toBits()`, `toRawBits()`
         - 실수 값의 이진수 배열 형태를 알아낼 수 있음
         
-
+## 177. BinaryToRealNumber
+   1. `fromBits()`
+        - 이진수 값을 실수값을 만들수 있음
         
+
