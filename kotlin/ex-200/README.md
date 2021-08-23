@@ -1501,16 +1501,22 @@
    1. 삼각함수
         - 삼각비 계산을 위한 함수
         - 함수
-            - sin()
-            - cos()
-            - tan()
-            - asin()
-            - acos()
-            - atan()
-            - sinh()
-            - cosh()
-            - tanh()
-            - asinh()
-            - acosh()
-            - atanh()
+            - `sin()`
+            - `cos()`
+            - `tan()`
+            - `asin()`
+            - `acos()`
+            - `atan()`
+            - `sinh()`
+            - `cosh()`
+            - `tanh()`
+            - `asinh()`
+            - `acosh()`
+            - `atanh()`
+        
+## 176. RealNuberToBinary
+   1. `toBits()`, `toRawBits()`
+        - 실수 값의 이진수 배열 형태를 알아낼 수 있음
+        
+
         
