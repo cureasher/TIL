@@ -1522,4 +1522,9 @@
    1. `fromBits()`
         - 이진수 값을 실수값을 만들수 있음
         
+## 178. NullableToString
+   1. Nullable
+        - `Any?.toString()`
+            - null인 표현식도 호출가능해짐
 
+            
