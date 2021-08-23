@@ -1531,5 +1531,16 @@
    1. `String?.plus`
         - null 타입인 표현식에 `+` 연산자 사용 가능
 
-
+## 180. VerifyRealNumber
+   1. ValueVerify
+        - 특수 값
+            - Nan(Not a Number): 숫자가 아닌 값
+            - Infinite : 무한
+        - 함수
+            - `isNan()`
+                - 리시버에 들어 있는 값이 NaN이면 true, 아니면 false
+            - `isInfinite()`
+                - 리시버에 들어 있는 값이 Infinity이면 true, 아니면 false
+            - `isFinite()`
+                - 리시버에 들어 있는 값이 정상이면 true, 아니면 false
             
