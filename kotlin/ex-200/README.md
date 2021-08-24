@@ -1569,5 +1569,9 @@
         - 반환 타입은 Nothing 
         - 0이 전달되면 정상 종료, 0이 아닌수 전달시 비정상 종료 
 
+## 184. MeasureTimeMillis
+   1. `measureTimeMillis()`
+        - 함수 끝나기까지 경과한 시간을 밀리 초 단위로 반환
+   2. `measureNanoTime()`
+        - 함수 끝나기까지 경과한 시간을 나노 초 단위로 반환
 
-        
