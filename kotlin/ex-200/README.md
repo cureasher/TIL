@@ -1561,3 +1561,13 @@
             - 코틀린 버전을 가진 객체
         - `isAtLeast()`
             - 특정버전 이상인지 확인
+            
+## 183. ExitProcessFunction
+   1. `exitProcess`
+        - 프로그램을 종료하는 함수
+        - kotlin.system 선언된 함수 : import 해줘야 함 
+        - 반환 타입은 Nothing 
+        - 0이 전달되면 정상 종료, 0이 아닌수 전달시 비정상 종료 
+
+
+        
