@@ -1555,3 +1555,9 @@
         - `require()`
             - 인수 값이 false면 IllegalArgumentException 예외
             
+## 182. UsingVersion
+   1. UsingVersion
+        - `KotlinVersion.CURRENT`
+            - 코틀린 버전을 가진 객체
+        - `isAtLeast()`
+            - 특정버전 이상인지 확인
