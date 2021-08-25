@@ -1599,7 +1599,7 @@
                 - 새로운 디렉토리로 들어왔을 때 호출될 함수 지
 
 ## 187. ThreadFunction
-   1. Thread
+   1. thread
         - JVM의 스레드를 생성
         - kotlin.concurrent 패키지 import 필요
         - sleep함수 : 자바에 내장된 함수, 지정한 밀리초만큼 대기
@@ -1611,4 +1611,13 @@
             - `priority` : 스레드의 우선순위 지정(1~10사이으 ㅣ정수)
             - `block` : 스레드에서 실행할 함수 지정
 
+## 188. TimerFunction
+   1. timer
+        - 일정한 주기마다 특정함수를 호출할 수 있음
+        - 매개변수
+            - `name` : 타이머 이름 지정
+            - `daemon` : 데몬 스레드로 만들 것인지 여부 지정
+            - `initialDelay` : 초기 지연 시간을 밀리 초 단위로 설정
+            - `period` : 주기를 밀리초 단위로 설정 
+            - `action` : 매 주기마다 실행할 함수 지정
 
