@@ -1598,3 +1598,17 @@
             - `onEnter()`
                 - 새로운 디렉토리로 들어왔을 때 호출될 함수 지
 
+## 187. ThreadFunction
+   1. Thread
+        - JVM의 스레드를 생성
+        - kotlin.concurrent 패키지 import 필요
+        - sleep함수 : 자바에 내장된 함수, 지정한 밀리초만큼 대기
+        - 매개변수
+            - `start` : true를 넘기면 스레드 생성과 동시에 바로 실행
+            - `isDaemon` : 데몬 스레드로 만들것인지 여부 지정
+            - `contextClassLoader` : 스레드에서 사용할 클래스 로더 지정
+            - `name` : 스레드의 이름 지정
+            - `priority` : 스레드의 우선순위 지정(1~10사이으 ㅣ정수)
+            - `block` : 스레드에서 실행할 함수 지정
+
+
