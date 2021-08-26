@@ -1627,3 +1627,11 @@
         - lock: 동시 수정으로부터 보호할 객체
         - block: lock 객체를 점유하는 동안 실행할 함수
         
+## 190. JavaToKotlinTypes
+   1. 자바 참조 타입
+        - java double타입 : kotlin Double 타입으로 변환 됨
+        - StringBuffer의 append메서드
+            - java.lang.String 타입 인수를 받지만 kotlin.String 타입으로 변환 됨
+        - StringBuffer의 toString 메서드
+            - java.lang.String 타입 값 반환하지만 코틀린에서 호출시 kotlin.String 타입으로 변환 됨
+
