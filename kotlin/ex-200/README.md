@@ -1635,3 +1635,8 @@
         - StringBuffer의 toString 메서드
             - java.lang.String 타입 값 반환하지만 코틀린에서 호출시 kotlin.String 타입으로 변환 됨
 
+## 191. JavaToKotlinNullSafety
+   1. Null 안전성
+        - 타입 이름 뒤에 느낌표를 붙임
+        - 자바의 참조 타입을 코틀린으러 불러올시 타입이름에 느낌표를 붙임
+        - 자바의 참조타입은 null을 허용하기 때문
