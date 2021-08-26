@@ -18,4 +18,12 @@ public class JavaClass {
     public boolean isGood(){
         return true;
     }
+
+    public boolean contains(int any){
+        return true;
+    }
+
+    public int get(int any){
+        return any;
+    }
 }
