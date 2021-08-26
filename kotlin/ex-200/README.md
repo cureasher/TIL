@@ -1621,3 +1621,9 @@
             - `period` : 주기를 밀리초 단위로 설정 
             - `action` : 매 주기마다 실행할 함수 지정
 
+## 189. SynchronizedFunction
+   1. `synchronized`
+        - 스레드 동기화 함수
+        - lock: 동시 수정으로부터 보호할 객체
+        - block: lock 객체를 점유하는 동안 실행할 함수
+        
