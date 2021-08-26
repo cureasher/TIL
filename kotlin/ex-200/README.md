@@ -1648,5 +1648,12 @@
             - 코틀린 in 키워드 존재함
             - 사용하려면 ``으로 감싸줘야함
 
-
+## 193. JavaToKotlinSamConversion
+   1. `SAM` 변환
+        - Single Abstract Method
+        - 단일 추상메서드
+        - 메서드를 한개만 갖고 있는 인터페이스
+        - 함수 리터럴을 특정 인터페이스로 변환하는 것
+        - `Runnable`
+        - `Comparable`
             
