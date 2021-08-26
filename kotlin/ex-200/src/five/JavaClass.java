@@ -26,4 +26,8 @@ public class JavaClass {
     public int get(int any){
         return any;
     }
+
+    public static <T> void printClassInfo(Class<T> clazz){
+        System.out.println(clazz.getCanonicalName());
+    }
 }
