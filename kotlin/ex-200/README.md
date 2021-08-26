@@ -1656,4 +1656,9 @@
         - 함수 리터럴을 특정 인터페이스로 변환하는 것
         - `Runnable`
         - `Comparable`
-            
+
+## 194. JavaToKotlinGetterSetter
+   1. 자바 클래스 접근
+        - 자바 get, set으로 시작하는 메서드
+        - 코틀린에서 프로퍼티로 접근
+
