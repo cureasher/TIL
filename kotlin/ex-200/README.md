@@ -1683,3 +1683,14 @@
    1. 프로퍼티 접근
         - `getNum()` : 코틀린 Get프로퍼티 접근
         - `setNum()` : 코틀린 Set프로퍼티 접근
+        
+## 199. KotlinToJavaObject
+   1. 선언된 객체
+        - `object`
+            - 자바에서 일반적인 클래스로 인식
+            - INSTANCE라는 이름의 static 필드 자동으로 갖음
+            - 코틀린 객체의 프로퍼티와 멤버 함수에 접근 가능
+            - @JvmStatic : INSTANCE 필드 없이 접근 가능
+            
+
+            
