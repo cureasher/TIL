@@ -1692,5 +1692,8 @@
             - 코틀린 객체의 프로퍼티와 멤버 함수에 접근 가능
             - @JvmStatic : INSTANCE 필드 없이 접근 가능
             
-
+## 200. KotlinToJavaCompanionObject
+   1. 동반자 객체
+        - `companion object`
+            - 자바에서 Companion이라는 static 필드를 갖음
             
