@@ -1672,4 +1672,10 @@
         - `printClassInfo` : 클래스 타입 정보
         - 코틀린 클래스 타입 정보 확인 가능
         
+## 197. KotlinToJavaPackageLevel
+   1. 패키지 레벨 변수
+        - 패키지 레벨의 변수, 함수, 확장함수 선언
+        - Getter와 Setter를 통해 접근
+        - `extension()` : 코틀린 확장함수 사용
+        - `@file:JvmName` : 클래스 이름 별명으로 사용
  
