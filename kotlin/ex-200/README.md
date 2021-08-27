@@ -1679,3 +1679,7 @@
         - `extension()` : 코틀린 확장함수 사용
         - `@file:JvmName` : 클래스 이름 별명으로 사용
  
+## 198. KotlinToJavaProperty
+   1. 프로퍼티 접근
+        - `getNum()` : 코틀린 Get프로퍼티 접근
+        - `setNum()` : 코틀린 Set프로퍼티 접근
