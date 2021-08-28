@@ -220,9 +220,8 @@
             기호   | 사용 예   | 뜻
             :---: |  :---:  | ---
             &&    | a && b  | a와 b가 모두  true 일때 true 하나라도 false있으면 false
-            !     | !a      | a가 true면 결과값은 false, a가 false면 결과값은 true
-            
-            a \|\| b : a와 b중 하나라도 true면 true 둘다 false 여야 false
+            !     | !a      | a가 true면 결과값은 false, a가 false면 결과값은 true             
+           \|\| | a \|\| b | a와 b중 하나라도 true면 true 둘다 false 여야 false
            ```kotlin
                val a2 = 10
                var isTrue = 5 < a < 15 // 잘못된 코드
