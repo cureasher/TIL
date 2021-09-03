@@ -711,3 +711,82 @@
 ## (9) 결론
 - 깨끗한 코드는 읽기도 좋아야 하지만 안전성도 높아야 함
 - 오류 처리는 프로그램 논리와 분리하면 독립적 추론 가능
+
+# 8장 경계
+- 시스템에 들어가는 모든 소프트웨어를 직접 개발하는 경우 드뭄
+- 패키지, 오픈소스, 사내 다른 팀이 제공하는 컴포넌트 이용
+- 외부코드를 우리 코드에 깔끔하게 통합해야 함
+## (1) 외부 코드 사용하기
+- 인터페이스 제공자
+	-  적용성을 최대한 넓히려 애씀
+- 인터페이스 사용자
+	- 자신의 요구에 집중하는 인터페이스를 바람
+- Map은 다양한 인터페이스로 수많은 기능 제공
+- 인터페이스 제공자는 클래스를 프로그램에 필요한 인터페이스만 제공
+	- 코드는 이해하기 쉽고 오용하기 어렵게 작성
+	- 설계규칙과 비즈니스 규칙을 따르도록 강제 함
+- Map과 유사한 경계 인터페이스는 여기저기 넘기면 안됨
+## (2) 경계 살피고 익히기
+- 외부코드
+	- 익히기 어려움
+	- 통합하기 어려움
+- 학습테스트
+	- 우리쪽 코드를 작성해 외부 코드 호출하지 않고 먼저 간단한 테스트 케이스 작성
+	- 사용하려는 방식대로 외부 API 호출
+	- 통제된 환겨에서 API 제대로 이해하는지 확인
+	- API를 사용하려는 목적에 초점 맞춤
+## (3) log4j 익히기
+- 아파치의 log4j패키지
+```java
+	public class LogTest {
+		private Logger logger;
+
+		@Before
+		public void initialize() {
+			logger = Logger.gertLogger(“logger”);
+			logger.removeAllAppenders();
+			Logger.getRootLogger().removeAllAppenders();
+		}
+        @Test
+        public void basicLogger(){
+            BsicConfigurator.configure();
+            logger.info(“basicLogger”);
+        }
+        @Test
+        public void addAppenderWithStream(){
+            logger.addAppender(new ConsoleAppender(
+                new PatternLayout(“%p %t %m%n),
+                ConsoleAppender.SYSTEM_OUT));
+                logger.info(“addAppenderWithStream”);
+        }
+        @Test
+        public void addAppenderWithoutStream(){
+            logger.addAppender(new ConsoleAppender(
+                new PatternLayout(“%p %t %m%n”)));
+                logger.info(“addAppenderWithoutStream”);
+        }
+    }
+```
+## (4) 학습 테스트는 공짜 이상이다
+- 이해도를 높여주는 정확한 실험
+- 투자하는 노력보다 얻는 성과가 큼
+- 패키지 새 버전이 나올 때마다 새로운 위험이 생김
+- 패키지가 예상대로 도는지 검증 필요
+- 경계 테스트
+	- 패키지 새버전 이전 쉬움
+## (5) 아직 존재하지 않는 코드를 사용하기
+- 경계
+    - 아는 코드와 모르는 코드를 분리
+- 자체적인 인터페이스
+    - 바라는 인터페이스를 직접 구현하면 전적으로 통제하는 장점이 생김
+    - 코드 가독성 높아지고, 코드 의도도 분명해짐
+## (6) 깨끗한 경계
+- 우수한 소프트웨어 설계 
+    - 변경하는데 많은 투자와 재작업이 필요하지 않음
+- 통제 못하는 코드
+	- 너무 많은 투자를 하거나 향후 변경 비용이 지나치게 커지지 않도록 주의 필요
+- 통제 불가능한 외부 패키지에 의존하는 대신 통제 가능한 우리 코드에 의존하는 편이 좋음
+- 외부 패키지 호출하는 코드를 가능한 줄여 경계 관리
+- 외부 패키지를 원하는 인터페이스 변환
+    - 새로운 클래스로 경계를 감쌈
+    - ADAPTER 패턴을 사용
