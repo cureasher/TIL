@@ -1358,3 +1358,33 @@
 - ArgumentMarshaler를 argumentMarshaler 독자적 변수 만듦
     - 중복이 심하고 함수가 길어짐
         - am으로 줄임
+## (3) String 인수
+- 다른 인수를 추가하는 과정과 유사
+- ArgumentMarshaler에서 getBoolean함수 제거
+    - protected변수인 booleanValue
+        - BooleanArgumentMarshaler 클래스
+- String 인수
+    - set과 get을 옮기고 사용하지 않는 함수 제거
+- 해시맵 제거
+    - ArgumentMarshaler에 맵을 만들어 원래 맵을 교체
+    - 관련 메서드 변경
+    - 개별 메서드들을 인라인 코드로 변경
+- 일일이 확인하는 코드 개선
+    - args 배열을 list로 변환
+    - Iterator를 set함수로 전달
+    - If-else와 연쇄적으로 이어지는 구문 제거
+    - set 함수 옮기기
+    - ArgumentMarshaler에 set 추상메서드로 추가
+    - 각 파생 클래스에 set 메서드 추가
+    - 새로운 인수 유형 추가
+    - DoubleArgumentMArshaler
+    - ErrorCode enum에 MISSING_DOUBLE, INVALID_DOUBLE 추가
+    - getDouble 함수 추가
+- ArgsException
+    - 독자적인 모듈로 만들어 Args 모듈에서 오류지원 코드를 옮겨올 수 있음
+    - 예외와 오류 처리코드 완벽 분리
+## (4) 결론
+- 처음부터 코드를 깨끗하게 유지하려 해야함
+- 아침에 엉망으로 만든 코드를 오후에 정리하기는 어렵지 않음
+- 5분전에 엉망으로 만든 코드는 당장 정리하기 쉬움
+- 코드는 언제나 최대한 깔끔하고 단순하게 정리하자
