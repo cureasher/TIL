@@ -107,3 +107,49 @@ def two_number_sum_hash(numbers: List[int], target: int) -> List[int]:
 ```
 - 결과
     - [0, 1]
+## (4) bruteForceRemoveDuplicate
+### 1) 문제
+- 중복 값을 가진 배열
+- 정렬 되어 있음
+- 중복 요소 중 하나만 남겨라
+- 중복 안 된 배열의 길이 반환
+### 2) 제한사항
+- 정수 배열 입력
+- 결과 값은 정수, 배열의 길이보다 작거나 같음
+- 입력으로 주어진 배열이 0일 수 있음
+- 추가 배열 할당 없음
+### 3) 풀이
+1. 브루트포스
+- 배열에 첫번째 값 저장
+- 배열의 저장한 값 제외하고 순회
+    - 두번째 배열부터 n-1까지 순회
+    - 저장한 배열 값과 중복 값이 있으면 다음 요소로 넘어감
+    - 저장한 값과 다를 경우 저장한 값을 다른 값으로 업데이트
+    - count 값 1증가
+    - count 값을 증가시키 전 인덱스가 증가된 값들을 배열에 저장
+    - 시간복잡도: O(n), 공간복잡도: O(1)
+### 4) 실습
+```python
+from typing import List
+def bruteForceRemoveDuplicate(numbers: List[int]) -> int:
+        if len(numbers) <= 0:
+            return 0
+        numberArray = numbers[0]
+        count = 1
+
+        for index in range(1, len(numbers)):
+            if numberArray != numbers[index]:
+                numberArray = numbers[index]
+                numbers[count] = numberArray
+                count += 1
+        return count
+```
+### 5) 결과
+- 함수 실행
+```python
+    bruteForceRemoveDuplicate([])
+    bruteForceRemoveDuplicate([1,2,3,4])
+    bruteForceRemoveDuplicate([0,0,1,1,2,2,3,3,4,4])
+```
+- 결과
+    - 0, 4, 5
