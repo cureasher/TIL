@@ -153,3 +153,63 @@ def bruteForceRemoveDuplicate(numbers: List[int]) -> int:
 ```
 - 결과
     - 0, 4, 5
+## (5) NumberArraySerachInsert
+### 1) 문제
+- 주어진 배열에서 목표값 찾기
+    - 목표값이 있는 경우 인덱스 반환
+    - 목표값이 없는 경우 들어가야 하는 인덱스 반환
+### 2) 제한사항
+- 정수형 배열
+- 졍렬된 상태
+- 데이터 음수, 0, 양수
+- 크기는 클 수 있음
+### 3) 풀이
+1. 브루트포스
+    - 배열의 요소를 인덱스 0부터 순회
+    - 목표값과 같거나 크면 순회 종료
+    - 졸됴된 시점의 인덱스 반환
+    - 시간복잡도: O(n), 공간복잡도: O(1)
+2. 해시테이블
+    - 배열을 이진탐색으로 접근
+    - 결과값이 있는 경우 인덱스 반환
+    - 찾지 못할 경우 최종 접근한 낮은 인덱스 반환
+    - 시간복잡도: O(logN), 공간복잡도: O(1)
+3. 풀이법
+    - 목표값과 동일하거나 커지는 시점의 값 반환
+    - 순차 탐색은 최악의 경우 모든 요소를 방문해야함
+        - 이진탐색은 빠르게 처리할 수 있음
+### 4) 실습
+```python
+def bruteforce_search_insert(numbers: List[int], search: int)-> int:
+    index = 0
+
+    while index < len(numbers):
+        if search <= numbers[index]:
+            break
+        index += 1
+    return index
+```
+```python
+def hashtable_serach_insert(numbers: List[int], search: int) -> int:
+    low = 0
+    high = len(numbers) - 1
+
+    while low <= high:
+        mid = int((low + high) / 2)
+
+        if search == numbers[mid]:
+            return mid
+        if search > numbers[mid]:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return low
+```
+### 5) 결과
+- 함수 실행
+```python
+    bruteforce_search_insert([1,3,5,6], 0)
+    hashtable_serach_insert([1,3,5,6], 50)
+```
+- 결과
+    - 0, 4
