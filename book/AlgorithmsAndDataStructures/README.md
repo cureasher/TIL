@@ -213,3 +213,76 @@ def hashtable_serach_insert(numbers: List[int], search: int) -> int:
 ```
 - 결과
     - 0, 4
+
+## (6) SortArrayMerge1
+### 1) 문제
+- 정렬된 배열
+- 정렬 유지하면서 배열 합치기
+### 2) 제한사항
+- 배열은 정렬 된 상태
+- 배열운 2개
+- 각 n개와 m개의 요소가 있음
+- 배열의 크기는 n + m
+### 3) 풀이
+1. 정렬
+- 두번째 배열의 요소를 첫번째 배열의 확보된 공간에 삽입
+- sorted() 함수로 정렬
+- 시간복잡도: O(NlogN), 공간복잡도: O(N)
+2. 비교 및 삽입
+- 첫번째 배열
+- 두번째 배열
+- 저장할 배열
+- 첫번째 요소와 두번째 요소 비교
+- 비교하여 큰 값을 저장핧 배열에 추가
+    - 저장할 배열 길이 1 감소
+- 첫번째 요소와 두번째 요소가 0보다 작아지면 비교 종료
+- 두번째 요소가 0보다 큰 경우
+    - 첫번째 배열을 가리키고 있는 저장한 배열 길이 감소
+    - 첫번째 배열에 삽입
+- 시간복잡도: O(N+M), 공간복잡도: O(1)
+3. 풀이법
+### 4) 실습
+```python
+from typing import List
+def align_merge(number_one_array: List[int], m : int, number_two_array: List[int], n: int) -> List:
+    for index, value in enumerate(number_two_array):
+        number_one_array[m + index] = value
+    number_one_array[:] = sorted(number_one_array)
+    return number_one_array
+```
+```python
+from typing import List
+def compare_insert_merge(number_one_array: List[int], m : int, number_two_array: List[int], n: int) -> List:
+    first = m - 1
+    second = n - 1
+    save = m + n - 1
+
+    while first >= 0 and second >= 0:
+        if number_one_array[first] < number_two_array[second]:
+            number_one_array[save] = number_two_array[second]
+            second -= 1
+        else :
+            number_one_array[save] = number_one_array[first]
+            first -= 1
+        save -= 1
+    while second >= 0:
+        number_one_array[save] = number_two_array[second]
+        save -= 1
+        second -= 1
+    return number_one_array
+```
+### 5) 결과
+- 함수 실행
+    - align_merge([1,2,3], 3, [], 0)
+    - compare_insert_merge([1,2,3], 3, [], 0)
+    - align_merge([1,2,3,0,0,0], 3, [4,5,6], 3)
+    - compare_insert_merge([1,2,3,0,0,0], 3, [4,5,6], 3)
+    - align_merge([1,2,3,0,0,0], 3, [1,2,3], 3)
+    - compare_insert_merge([1,2,3,0,0,0], 3, [1,2,3], 3)
+- 결과
+    - [1, 2, 3]
+    - [1, 2, 3]
+    - [1, 2, 3, 4, 5, 6]
+    - [1, 2, 3, 4, 5, 6]
+    - [1, 1, 2, 2, 3, 3]
+    - [1, 1, 2, 2, 3, 3]
