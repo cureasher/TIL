@@ -240,7 +240,6 @@ def hashtable_serach_insert(numbers: List[int], search: int) -> int:
     - 첫번째 배열을 가리키고 있는 저장한 배열 길이 감소
     - 첫번째 배열에 삽입
 - 시간복잡도: O(N+M), 공간복잡도: O(1)
-3. 풀이법
 ### 4) 실습
 ```python
 from typing import List
@@ -303,3 +302,32 @@ def compare_insert_merge(number_one_array: List[int], m : int, number_two_array:
     - 두번째 배열요소와 첫번째 요소 교체
     - 변경된 첫번째 요소는 다른 요소와 비교하며 정렬
 - 시간복잡도: O(mn), 공간복잡도: O(1)
+### 4) 실습
+```python
+from typing import List
+def bruteforce_merge(first_number_array: List[int], first: int, second_number_array: List[int], second: int) -> None:
+        for index, first_number_item in enumerate(first_number_array):
+            if first_number_item > second_number_array[0]:
+                first_number_array[index] = second_number_array[0]
+                second_number_array[0] = first_number_item
+
+                for save, item in enumerate(second_number_array[1:], start = 1):
+                    if first_number_item <= item:
+                        second_number_array[save - 1] = first_number_item
+                        break
+                    second_number_array[save - 1] = second_number_array[save]
+        print(first_number_array)
+        print(sorted(second_number_array))
+```
+### 5) 결과
+- 함수 실행
+bruteforce_merge([1,3,5,7], 4, [0,2,6,8,9], 5)
+bruteforce_merge([2, 8, 10], 3, [5], 3)
+bruteforce_merge([10,12], 2, [5,18,20], 3)
+- 결과
+[0, 1, 2, 3]
+[5, 6, 7, 8, 9]
+[2, 5, 8]
+[10]
+[5, 10]
+[12, 18, 20]
