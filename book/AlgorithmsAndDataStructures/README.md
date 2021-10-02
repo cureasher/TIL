@@ -331,3 +331,60 @@ bruteforce_merge([10,12], 2, [5,18,20], 3)
 [10]
 [5, 10]
 [12, 18, 20]
+
+## (8) PascalTriangle
+### 1) 문제
+- 파스칼 삼각형
+    - 수학의 이항 계수를 삼각형의 형태로 숫자 배열한 구성
+- 처음 두줄은 1이 들어감
+- 숫자 새로만들어 질때
+    - 윗줄의 왼쪽, 오른쪽 수를 더해서 만듦
+- 2차원 배열로 들어간 형태
+    - [[1], [1,1], [1,2,1]...]
+### 2) 제한사항
+- 양의 정수 입력
+- 2차원 배열이나 리스트로 반환
+### 3) 풀이
+1. 브루트포스
+- 기반리스트 생성
+- 첫번째 리스트 요소는 1
+- 행만큼 순회
+- 행의 맨 처음값과 끝갑은 1
+- 이전 행의 값을 참조해 사용
+- 시간복잡도: O(n²), 공간복잡도: O(1)
+2. 풀이법
+### 4) 실습
+```python
+    from typing import List
+    def generate(number_rows: int) -> List[List[int]]:
+        pascal_triangle = []
+
+        if number_rows <= 0:
+            return pascal_triangle
+
+        pascal_triangle.append([1])
+
+        for front in range(1, number_rows):
+            pascal_prev_len = len(pascal_triangle[front - 1])
+            curr_list = []
+
+            for end in range(pascal_prev_len + 1):
+                number = 1
+                if end != 0 and end != pascal_prev_len:
+                    number = pascal_triangle[front-1][end-1] 
+                    + pascal_triangle[front-1][end]
+                curr_list.append(number)
+            pascal_triangle.append(curr_list)
+        return pascal_triangle
+```
+### 5) 결과
+- 함수 실행
+    - generate(0)
+    - generate(1)
+    - generate(3)
+    - generate(5)
+- 결과
+    - []
+    - [[1]]
+    - [[1], [1, 1], [1, 2, 1]]
+    - [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
