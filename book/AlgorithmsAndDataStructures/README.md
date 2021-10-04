@@ -388,3 +388,79 @@ bruteforce_merge([10,12], 2, [5,18,20], 3)
     - [[1]]
     - [[1], [1, 1], [1, 2, 1]]
     - [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+
+## (9) ArrayManyElement
+### 1) 문제
+- 배열에서 숫자 값이 많은 것 찾기
+### 2) 제한사항
+- 정수형 배열
+- 다수의 수는 반드시 1개이상 존재
+- 배열은 요소가 1개이상 가짐
+### 3) 풀이
+1. 브루트포스
+- 배열 순회
+- 각 배열 요소를 모든요소와 비교
+- 요소의 개수를 확인하며 개수 확인
+- 시간복잡도: O(n²), 공간복잡도: O(1)
+2. 해시테이블
+- 해시 테이블 키 항목 배열 요소로 값 항목 지정
+- 배열 순회
+- 배열 요소를 해시 테이블에서 찾음
+    -  값이 있으면 해시 테이블의 값에 1을 더함
+    - 값이 없으면 해시 테이블의 키항목으로 추가
+- 다수의 수 조건에 맞는 수 반환
+- 시간복잡도: O(n), 공간복잡도: O(n)
+3. 정렬
+- 배열 정렬
+- 가운데 수 반환
+- 시간복잡도: O(nlogn), 공간복잡도: O(1)
+3. 풀이법
+### 4) 실습
+```python
+    def manyElementBruteforce(numbers: List[int]) -> int:
+        main_count = int(len(numbers)/2)
+
+        for first, item_first in enumerate(numbers):
+            count = 0
+            for second, item_second in enumerate(numbers[first:], start=first):
+                if item_first == item_second:
+                    count += 1
+                if count > main_count:
+                    return item_first
+        return -1
+```
+```python
+    def manyElementHashmap(numbers: List[int]) -> int:
+        many_count = int(len(numbers)/2)
+
+        hashmap = {}
+
+        for number in numbers:
+            if hashmap.get(number) != None:
+                hashmap[number] = hashmap[number] + 1
+            else:
+                hashmap[number] = 1
+
+            if hashmap[number] > many_count:
+                return number
+        return -1
+```
+```python
+    def manyElementSort(numbers: List[int]) -> int:
+        return sorted(numbers)[int(len(numbers)/2)]
+```
+### 5) 결과
+- 함수 실행
+    - manyElementHashmap([3,2,3,2,3])
+    - manyElementBrutforce([3,2,3,2,3])
+    - manyElementSort([3,2,3,2,3])
+    - manyElementHashmap([2,2,1,1,1,1,1,2,2])
+    - manyElementBrutforce([2,2,1,1,1,1,1,2,2])
+    - manyElementSort([2,2,1,1,1,1,1,2,2])
+    - manyElementHashmap([2,2,1,1,1,2,2])
+    - manyElementBrutforce([2,2,1,1,1,2,2])
+    - manyElementSort([2,2,1,1,1,2,2])
+- 결과
+    - 3
+    - 1
+    - 2
