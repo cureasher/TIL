@@ -464,3 +464,52 @@ bruteforce_merge([10,12], 2, [5,18,20], 3)
     - 3
     - 1
     - 2
+
+## (10) ArrayLotate
+### 1) 문제
+- 정수형 배열과 move가 주어짐
+- move만큼 각요소를 이동 및 회전
+### 2) 제한사항
+- 정수형 배열
+- 양의 정수 k값
+### 3) 풀이
+1. 임시배열
+    - 임시 배열을 입력크기만큼 만듦
+    - number 배열 순회
+    - 임시 배열에 number 요소의 move만큼 이동 및 회전시킨 값에 넣음
+    - 임시 배열의 요소를 number 배열의 같은 인덱스에 넣음
+- 시간복잡도: O(n), 공간복잡도: O(n)
+2. 3번 뒤집기
+    - 전체 숫자를 뒤집음
+    - 처음부터 move까지 뒤집어 넣음
+    - move부터 남은 길이만큼 뒤집어 넣음
+    - 시간복잡도: O(n), 공간복잡도: O(1)
+### 4) 실습
+```python
+    def rotate_temp(numbers: List[int], move: int) -> List:
+        temp = [0] * len(numbers)
+
+        for index, element in enumerate(numbers):
+            temp[(index + move) % len(numbers)] = numbers[index]
+
+        numbers[:] = temp
+        return numbers
+```
+```python
+    def revert_rotate_array(numbers: List[int], move: int) -> List:      
+        move = move % len(numbers)
+        numbers[:] = numbers[::-1]
+        numbers[0:move] = numbers[0:move][::-1]
+        numbers[move:len(numbers)] = numbers[move:len(numbers)][::-1]
+        return numbers
+```
+
+### 5) 결과
+- 함수 실행
+    - rotate_temp([2,4,6,8,10], 2)
+    - rotate_temp([1,2],3)
+    - revert_rotate_array([2,4,6,8,10], 2)
+    - revert_rotate_array([1,2],3)
+- 결과
+    - [8, 10, 2, 4, 6]
+    - [2, 1]
