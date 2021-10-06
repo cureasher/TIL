@@ -478,7 +478,7 @@ bruteforce_merge([10,12], 2, [5,18,20], 3)
     - number 배열 순회
     - 임시 배열에 number 요소의 move만큼 이동 및 회전시킨 값에 넣음
     - 임시 배열의 요소를 number 배열의 같은 인덱스에 넣음
-- 시간복잡도: O(n), 공간복잡도: O(n)
+    - 시간복잡도: O(n), 공간복잡도: O(n)
 2. 3번 뒤집기
     - 전체 숫자를 뒤집음
     - 처음부터 move까지 뒤집어 넣음
@@ -513,3 +513,51 @@ bruteforce_merge([10,12], 2, [5,18,20], 3)
 - 결과
     - [8, 10, 2, 4, 6]
     - [2, 1]
+
+## (11) MissingNumber
+### 1) 문제
+- 주어진 배열에서 누락된 숫자 찾기
+### 2) 제한사항
+- 정수형 배열(n크기)
+- 0~n 사이의 숫자만 가짐
+- 빠져있는 숫자는 하나
+### 3) 풀이
+1. xor
+- xor 비트연산
+- xor 결과 누적
+- 시간복잡도: O(n), 공간복잡도: O(1)
+2. 해시셋
+- 배열을 해시셋에 넣음
+- 해시셋에 없는 값 반환
+- 시간복잡도: O(n), 공간복잡도: O(n)
+### 4) 실습
+```python
+from typing import List
+def missingNumber_xor(missing_number: List[int]) -> int:
+    miss = len(missing_number)
+
+    for index in range(len(missing_number)):
+        miss = miss ^ index ^ missing_number[index]
+
+    return miss
+```
+```python
+from typing import List
+def missingnumber_hashset(missing_number: List[int]) -> int:
+    set_numbers = set(missing_number)
+
+    for index in range(len(missing_number) + 1):
+        if index not in set_numbers:
+            return index
+
+    return -1
+```
+### 5) 결과
+- 함수 실행
+    - missingNumber_hashset([5,4,2,0,1])
+    - missingNumber_xor([5,4,2,0,1])
+    - missingNumber_hashset([4,2,3,5,7,0,1])
+    - missingNumber_xor([4,2,3,5,7,0,1])
+- 결과
+    - 3
+    - 6
