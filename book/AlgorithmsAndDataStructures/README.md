@@ -561,3 +561,45 @@ def missingnumber_hashset(missing_number: List[int]) -> int:
 - 결과
     - 3
     - 6
+
+## (13) SubSetBruteForce
+### 1) 문제
+- 고유한 정수 집합 배열
+- 가능한 모든 부분집합 반환
+- 중복 허용 안함
+### 2) 제한사항
+- 2차원 정수형 배열
+- 입력요소는 중복 허용 안함
+### 3) 풀이
+1. Brute-force
+- index = 0
+- subset 배열 선언
+- 부분 배열을 결과 배열에 저장
+- 0부터 배열길이만큼 순회
+    - index 1씩 증가하며 재귀 형태
+    - subset재귀 복귀후 마지막 요소 제거 후 순회
+- 시간복잡도: O(n*2^n), 공간복잡도: O(n*2^n)
+### 4) 실습
+```python
+from typing import List
+def subsets_brute_force(numbers: List[int],
+    result: List[List[int]], subset: List[int],
+    index) -> List:
+    if len(subset) > len(numbers):
+        return
+
+    result.append(subset.copy())
+
+    for number in range(index, len(numbers)):
+        subset.append(numbers[number])
+        subsets_recursion(numbers, result, subset, number + 1)
+        subset.pop()
+    return result
+```
+### 5) 결과
+- 함수 실행
+    - subsets_brute_force([2,4,6],[],[],0)
+    - subsets_brute_force([1],[],[],0)
+- 결과
+    - [[], [2], [2, 4], [2, 4, 6], [2, 6], [4], [4, 6], [6]]
+    - [[], [1]]
