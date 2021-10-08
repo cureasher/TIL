@@ -603,3 +603,69 @@ def subsets_brute_force(numbers: List[int],
 - 결과
     - [[], [2], [2, 4], [2, 4, 6], [2, 6], [4], [4, 6], [6]]
     - [[], [1]]
+
+## (14) WordFindBruteForce
+### 1) 문제
+- 2차원 배열
+- 단어 문자열 만들 수 있는 유무
+### 2) 제한사항
+- m * n의 2차원 배열
+- 인접한 배열만 이동 가능
+### 3) 풀이
+1. Brute-force
+- look 배열의 요소 순회
+- look[x][y]와 voca[0] 요소가 같으면 
+- 인접한 문자 확인
+- 좌표별 다음문자로 재귀 호출
+- 시간복잡도: O(m+n*4^l), 공간복잡도: O(1)
+### 4) 실습
+```python
+from typing import List
+def WordFindBruteForce(look: List[List[str]], voca: str) -> bool:
+    way = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+
+    def search_way(x: int, y: int, voca_find: str):
+        if (x < 0 or x >= len(look)) or \
+           (y < 0 or y >= len(look[0])):
+            return False
+
+        if look[x][y] != voca_find[0]:
+            return False
+
+        if len(voca_find) == 1:
+            return True
+
+        look[x][y] = '.'
+
+        for first, second in way:
+            if search_way(x + first, y + second,
+                                voca_find[1:]):
+                return True
+
+        look[x][y] = voca_find[0]
+        return False
+
+    result = False
+    for x in range(len(look)):
+        for y in range(len(look[0])):
+            if look[x][y] == voca[0] and \
+               search_way(x, y, voca):
+                result = True
+                break
+    return result
+```
+### 5) 결과
+- 함수 실행
+    - WordFindBruteForce([
+         ["A","B","C","E"],
+         ["F","G","H","I"],
+         ["A","D","E","E"]
+        ], "BGDE")
+    - WordFindBruteForce([
+         ["A","B","C","E"],
+         ["F","G","H","I"],
+         ["A","D","E","E"]
+        ], "GDEF")
+- 결과
+    - True
+    - False
