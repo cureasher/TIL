@@ -669,3 +669,73 @@ def WordFindBruteForce(look: List[List[str]], voca: str) -> bool:
 - 결과
     - True
     - False
+
+# 2장 문자열
+## (1) 문자열의 이해
+- str내장객체 클레스
+- 처음 생성된 이후 변경불가능한 불변 객체가 됨
+- 연산으로 만들어진 새로운 문자열에 할당
+## (2) 파이썬에서 문자열 사용법
+### 1) 문자열 생성
+- 큰 따옴표, 작은 따옴표로 묶인 문자열을 변수에 삽입
+### 2) 문자열 변수 접근
+- hello = "python"
+- hello[0]
+- p
+- 슬라이스 연산
+- hello[2:]
+- thon
+### 3) 문자열 메서드
+- lower()
+    - 소문자 변환
+    - 'LowerTest'.lower()
+    - lowertest
+- upper()
+    - 대문자 변환
+    - 'upperTest'.upper()
+    - UPPERTEST
+- strip()
+    - 문자열의 시작과 끝에 공백 제거
+    - '  strip test  '.strip()
+    - strip test
+- isalpha()
+    - 알파벳 확인
+    - 'abcd'.isalpha()
+    - True
+- isdigit()
+    - 숫자 확인
+    - '1234'.isdigit()
+    - True
+- isspace()
+    - 공백 확인
+    - ' '.isspace()
+    - True
+- isalnum()
+    - 공백이 없는 알파벳, 숫자
+    - 'a1'.isalnum()
+    - True
+- startswith('python')
+    - 문자열의 시작이 '문자열'로 시작하는지 확인
+    - "python Algorithm Test".startswith('python')
+    - True
+- endswith('Test')
+    - 문자열의 끝이 '문자열'로 끝나는지 확인
+    - "python Algorithm Test".endswith('Test')
+    - True
+- find('str')
+    - 문자열에서 처음 발견된 문자열의 인덱스 반환
+    - 인덱스 0부터 시작
+    - "python Algorithm Test".find('Algorithm')
+    - 7
+- replace('old', 'new')
+    - 문자열 치환
+    - "slow and slow".replace('slow', 'fast')
+    - fast and fast
+- split(구분문자)
+    - 구분문자로 구분
+    - "split test space".split(' ')
+    - ['split', 'test', 'space']
+- "".join(리스트)
+    - join_test=['split', 'test', 'space']
+    - ",".join(join_test)
+    - split과 반대 역할
