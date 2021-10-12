@@ -38,3 +38,13 @@
   card_view:cardCornerRadius="20dp"
   ```
 모서리의 반지름 크기 조절할 수 있음
+
+4장 툴바
+(1) xml에 xmlns:app 추가
+(2) Toolbar 선언
+  - 툴바 높이는 사이즈에 맞게
+  - layout_heigh="wrap_content"
+  - 툴바 최소 높이는 액션바 사이즈
+    - android_minHeight="?attr/actionBarSize"
+
+(3) theme에 스타일을 NoActionBar로 변경
