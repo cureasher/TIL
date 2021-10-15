@@ -972,3 +972,116 @@ def validIPv4IPv6Address(checkIP: str) -> str:
 - 11의 노드 12값 가지는 노드 연결
 - head를 가리키는 temp변수 생성
 - temp.next로 연결 리스트 순회
+- 연결리스트 순회 코드
+```python
+from typing import Any
+class Node:
+    def __init__(self, data: Any):
+        self.data = data
+        self.next = None
+        
+class LinkedList:
+    def __init__(self):
+        self.head = None
+                
+    def list_result(self):
+        temp = self.head
+        
+        while(temp):
+            print(temp.data, end =" ")
+            temp = temp.next
+        print()
+```
+- 실행 코드
+```python
+node_one = Node(11)
+linked_list = LinkedList()
+linked_list.head = node_one
+
+node_two = Node(12)
+node_three = Node(13)
+node_one.next = node_two
+node_two.next = node_three
+
+linked_list.list_result()
+// 결과 11 12 13
+```
+### 2) 연결리스트 맨뒤 요소 삽입
+```python
+    def list_push_tail(self, data: Any):
+        new_node = Node(data)
+        
+        if self.head is None:
+            self.head = new_node
+            return
+    
+        push_tail = self.head
+        while (push_tail.next):
+            push_tail = push_tail.next
+            
+        push_tail.next = new_node
+```
+- 실행코드
+```python
+linked_list = LinkedList()
+linked_list.list_push_tail(1)
+linked_list.list_push_tail(2)
+linked_list.list_push_tail(3)
+linked_list.list_result()
+// 결과 1 2 3
+```
+### 3) 연결리스트 맨앞 요소 삽입
+```python
+    def litst_push_front(self, data: Any):
+        new_node = Node(data)
+
+        if self.head is None:
+            self.head = new_node
+            return
+
+        temp = self.head
+        self.head = new_node
+        new_node.next = temp
+```
+- 실행코드
+```python
+linked_list = LinkedList()
+linked_list.list_push_tail(1)
+linked_list.list_push_tail(2)
+linked_list.list_push_tail(3)
+linked_list.litst_push_front(10)
+linked_list.list_result()
+// 결과 10 11 13 15
+```
+### 4) 연결리스트 노드 삭제
+```python
+def remove(self, data: Any):
+            current = self.head
+            previous = None
+
+            if current is not None:
+                if current.data == data:
+                    self.head = current.next
+                    current = None
+                    return
+
+            while (current is not None):
+                if current.data == data:
+                    break
+                previous = current
+                current = current.next
+
+            if current == None:
+                return
+
+            previous.next = current.next
+
+            current = None
+```
+- 실행코드
+```python
+linked_list.list_remove(11)
+linked_list.list_remove(13)
+linked_list.list_result()
+// 결과 10 15
+```
