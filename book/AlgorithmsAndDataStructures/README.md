@@ -1099,3 +1099,11 @@ linked_list.list_result()
         - 마지막 노드는 넣지 않음
     - 스택 모든 요소 하나식 꺼냄
     - 시간복잡도: O(n) 공간복잡도: O(n)
+2. 반복
+    - previous, current, next 만듦
+    - current노드가 None이 아닐때까지 진행
+    - current노드가 next노드 임시저장
+    - current의 next를 previous를 가리키도록 업데이트
+    - previous노드를 current노드로 이동
+    - 현재 노드를 임시 저장한 다음 노드로 이동
+    - 시간복잡도: O(n) 공간복잡도: O(1)
