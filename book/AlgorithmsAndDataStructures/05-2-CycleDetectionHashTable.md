@@ -13,3 +13,27 @@ def hasCycleHashTable(head: Node) -> bool:
 
     return False
 ```
+
+```python
+def hasCycleTwoPoint(head: Node) -> bool:
+    onepoint = head
+    twopoint = head
+
+    while twopoint != None and twopoint.next != None:
+        onepoint = onepoint.next
+        twopoint = twopoint.next.next
+
+        if onepoint == twopoint:
+            return True
+
+    return False
+```
+### 4) 결과
+[3,2,0,-4]
+1
+[1,2]
+0
+[1]
+-1
+
+코드 결과 : True, True, False
