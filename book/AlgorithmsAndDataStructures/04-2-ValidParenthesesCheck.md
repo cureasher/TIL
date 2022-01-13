@@ -16,3 +16,45 @@
 - 닫는 괄호는 스택에 최근에 문자를 꺼낸 쌍이 맞는지 확인
 - 맞지않으면 false, 맞으면 True
 - 시간 복잡도 : O(n), 공간 복잡도 : O(n)
+
+### 4) 실습
+```python
+def isValidParentheses(parentheses: str) -> bool:
+    parentheses_stack = []
+
+    paren_map = {
+        ')': '(',
+        '}': '{',
+        ']': '['
+    }
+
+    for text in parentheses:
+        if text not in paren_map.keys():
+            parentheses_stack.append(text)
+        else:
+            pair = parentheses_stack.pop() if parentheses_stack else ''
+
+            if paren_map[text] != pair:
+                return False
+
+    return len(parentheses_stack) == 0
+```
+### 5) 결과
+1. 입력 괄호 문자열
+     "()",
+     "()[]{}",
+     "(]",
+     "([)]",
+     "{[]}",
+     "(",
+     "]",
+     "((){})"
+2. 결과
+    True,
+    True,
+    False,
+    False,
+    True,
+    False,
+    False,
+    True
