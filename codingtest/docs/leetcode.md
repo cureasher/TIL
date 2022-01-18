@@ -5,4 +5,9 @@
     - 대소문자 구분안하므로 문자열 소문자나 대문자로 변환
     - 영문자와 숫자만을 대상으로 확인
     - 구현시 자바와의 차이점
-        - 자바는 replaceAll을 써야하지만 kotlin은 toRegex()를 쓰고 replace로 문자열 처리함.
+        - 자바는 replaceAll을 써야하지만 kotlin은 `toRegex()`를 쓰고 `replace`로 문자열 처리함.
+### 2) [문자열 뒤집기](../code/StringControll/ReverseString.kt)
+- 접근방법
+    - 문자 배열 입력 받기
+    - 리턴 없이 내부 리스트 조작
+    - `reversed()`함수로 문자열 뒤집음
