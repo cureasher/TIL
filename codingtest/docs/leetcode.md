@@ -19,3 +19,9 @@
     - " "으로 쪼갬(split)
     - banned 아닌 것만 찾아라
     - 값이 제일 많은것을 출력
+### 4) [로그 재정렬](../code/StringControll/ReorderLogFiles.kt)
+- 접근방법
+    - 첫번째 공백으로 로그 식별자 구분(map 함수로 필요한 로그 분리)
+    - partition함수를 통해 문자로그와 숫자로그 구분
+    - sortedWith함수에서 compareBy를 통해 문자로그 비교 후 식별자 비교
+    - 정렬된 문자로그와 숫자로그를 합친 값 출력
