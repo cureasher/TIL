@@ -19,9 +19,14 @@
     - " "으로 쪼갬(split)
     - banned 아닌 것만 찾아라
     - 값이 제일 많은것을 출력
-### 4) [로그 재정렬](../code/StringControll/ReorderLogFiles.kt)
+### 4) [로그 파일 재정렬](../code/StringControll/ReorderLogFiles.kt)
 - 접근방법
     - 첫번째 공백으로 로그 식별자 구분(map 함수로 필요한 로그 분리)
     - partition함수를 통해 문자로그와 숫자로그 구분
     - sortedWith함수에서 compareBy를 통해 문자로그 비교 후 식별자 비교
     - 정렬된 문자로그와 숫자로그를 합친 값 출력
+### 5) [그룹 애너그램](../code/StringControll/GroupAnagrams.kt)
+- 접근방법
+    - groupBy 함수로 문자열의 Key, Value로 그룹을 묶음
+    - toCharArray()를 사용해 문자 배열 만듦
+    - 문자 배열을 정렬해서 결과값을 리스트로 출력
