@@ -30,6 +30,12 @@
     - groupBy 함수로 문자열의 Key, Value로 그룹을 묶음
     - toCharArray()를 사용해 문자 배열 만듦
     - 문자 배열을 정렬해서 결과값을 리스트로 출력
+### 6) [가장 긴 팰린드롬 부분 문자열](../code/StringControll/LongestPalindrome.kt)
+- 접근방법
+    - words.indices == 0 until words.length
+    - bb일경우에도 팰린드롬이므로 아닌 경우 break로 나가게 조건문 설정
+    - slice함수 : 슬라이싱으로 시작부터 끝까지 문자열 자르기
+    - first는 1개씩 앞으로가고 last는 뒤로가는 형태로 확장
 ## 2. 배열
 ### 1) [두수의 합](../code/Array/TwoSum.kt)
 - 접근방법
