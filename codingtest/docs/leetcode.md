@@ -179,4 +179,12 @@
     - push는 queue의 사이즈 변수로 생성 및 값 등록
     - pop은 큐에서 값을 꺼내고 제거
     - top은 큐의 맨위의값을 꺼내서 보여줌
-    - empty는 queue가 비어 있는지 상태 반환 
+    - empty는 queue가 비어 있는지 상태 반환
+### 2) [스택을 이용한 큐 구현](../code/queue/ImplementQueueUsingStacks.kt)
+- 접근방법
+    - ArrayDeque를 통해 스택기능만 사용해 큐 구현
+    - push은 add()함수로 구현
+    - pop은 RemoveFirst() 첫번째 값 제거
+    - peek은 first()함수로 첫번째 값 가져옴
+    - empty는 isEmpty()로 비어있는 상태값 리턴
+    - peek은 조회하고 pop은 제거한 값을 보여줌
