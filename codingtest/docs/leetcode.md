@@ -200,4 +200,14 @@
     - enQueue는 큐가 꽉차있으면 false 반환, front는 1을 더해주고 큐사이즈 1증가
     - deQueue는 큐가 비어있으면 false 반환, rear에 1을 더해주고 큐사이즈 1감소
     - Front와 Rear는 비어있으면 -1 반환 아닌 경우 큐에 값을 넣음
-    - isEmty와 isFull은 비어깄거나 가득차있는지 확인하는 함수
+    - isEmty와 isFull은 비어있거나 가득차있는지 확인하는 함수
+## 6. 데크
+### 1) [원형 데크 디자인](../code/deque/MyCircularDeque.kt)
+- 접근방법
+    - 이중 연결리스트를 위한 풀이
+    - insertFront()와 insertLast()는 데크 앞쪽과 끝쪽에 아이템 추가하고 성공하면 true 반환
+    - deleteFront()와 deleteLast()는 데크의 처음과 마지막의 아이템을 삭제하고 성공한 경우 true 반환
+    - getFront()와 getRear()는 데크의 첫번째와 마지막 아이템을 가져오는 함수 비어있는 경우 -1 리턴
+    - isEmpty(), isFull() : 데크가 비어있거나 가득차있는지 여부를 확인하는 함수
+    - 왼쪽, 오른쪽 인덱스 역할하는 head, tail 정의
+    - 데크의 최대길이 정보 size로 설정
