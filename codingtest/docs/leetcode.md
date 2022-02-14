@@ -226,3 +226,8 @@
     - remove 키에 해당하는 키값을 해시맵에서 삭제
     - arrayOfNulls 초기값이 null인 배열
     - clacHash hashsize를 나눈 몫으로 key 확인하는 함수
+### 2) [보석과 돌](../code/hashtable/JewelsAndStones.kt)
+- 접근방법
+    - contains로 보석의 개수를 카운트함
+    - 돌을 필터해서 보석을 포함하고 있으면 값을 가져옴
+    - 카운트 결과를 반환
