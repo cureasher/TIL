@@ -11,6 +11,13 @@
     - slice함수로 자른 리스트를 오름차순 정렬
     - 명령에서 찾는 숫자의 위치 값 반환
     - 반환값을 IntArray 타입으로 변환한 값 출력
+### 3) [두개 뽑아서 더하기](../code/Array/TwoNumberSelectSum.kt)
+- 접근방법
+    - 두개의 반복문으로 풀이
+    - withIndex() 함수 -> 리스트를 인덱스별 값으로 변경
+    - filter() 함수 -> map으로 바꾸면서 첫번째 값과 두번째 값이 같은지 필터링
+    - map 함수로 인덱스가 다른 숫자끼리 값을 더함
+    - toSortedSet() 중복된 값 제거하며 오름차순 정렬
 ## 2. 수학
 ### 1) [약수의 개수와 덧셈](../code/math/MeasureCountAddition.kt)
 - 접근방법
