@@ -41,3 +41,9 @@
     - 글자의 위치가 같으면 다음 글자를 비교 정렬함
     - sorted() 오름차순 정렬
     - sortedBy() 조건부 오름차순 정렬
+### 2) [문자열 내림차순으로 배치하기](../code/StringControll/StringDescending.kt)
+- 접근방법
+    - toCharArray() : 문자열을 문자 배열로 변환
+    - sortedArrayDescending)() : 배열 내림차순
+    - 소문자와 대문자 중 소문자가 더 큰 값
+    - 내림차순 결과값 반환
