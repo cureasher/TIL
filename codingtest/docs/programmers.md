@@ -47,3 +47,8 @@
     - sortedArrayDescending)() : 배열 내림차순
     - 소문자와 대문자 중 소문자가 더 큰 값
     - 내림차순 결과값 반환
+### 3) [문자열 다루기 기본](../code/StringControll/StringHandleBasic.kt)
+- 접근방법
+    - 문자열의 길이가 4이거나 6인지 확인
+    - 문자열을 정수로 바꾸며 바꿀 수 없는 것은 null로 변환
+    - 문자열이 모두 정수인 경우 True, 아니면 false 반환
