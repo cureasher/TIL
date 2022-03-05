@@ -52,3 +52,7 @@
     - 문자열의 길이가 4이거나 6인지 확인
     - 문자열을 정수로 바꾸며 바꿀 수 없는 것은 null로 변환
     - 문자열이 모두 정수인 경우 True, 아니면 false 반환
+### 4) [서울에서 김서방 찾기](../code/StringControll/SeoulKimFind.kt)
+- 접근방법
+    - 문자열 배열에 Kim이 있는지 찾는 문제
+    - indexOf() 문자열 배열에 Kim 인덱스 번호 출력
