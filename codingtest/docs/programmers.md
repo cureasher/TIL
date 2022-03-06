@@ -56,3 +56,6 @@
 - 접근방법
     - 문자열 배열에 Kim이 있는지 찾는 문제
     - indexOf() 문자열 배열에 Kim 인덱스 번호 출력
+### 5) [수박수박수박수박수박수?](../code/StringControll/WarterMelonPattern.kt)
+- 접근방법
+    - CharArray를 수박의 개수를 확인하고 수박의 길이가 짝수이면 짝수만큼 반환하고 홀수인 경우 홀수 반환
