@@ -59,3 +59,7 @@
 ### 5) [수박수박수박수박수박수?](../code/StringControll/WarterMelonPattern.kt)
 - 접근방법
     - CharArray를 수박의 개수를 확인하고 수박의 길이가 짝수이면 짝수만큼 반환하고 홀수인 경우 홀수 반환
+### 6) [문자열을 정수로 바꾸기](../code/StringControll/StringToInt.kt)
+- 접근방법
+    - 문자열을 입력받고 정수로 변환하는 문제
+    - toInt()함수로 문자열을 정수로 변환
