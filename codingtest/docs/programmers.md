@@ -77,6 +77,11 @@
 - 접근방법
     - 정수형 배열을 입력받음
     - average()함수를 통해 바로 평균값 리턴
+### 9) [x만큼 간격이 있는 n개의 숫자](../code/math/NumberOfIntervals.kt)
+- 접근방법
+    - LongArray()로 n만큼의 Long타입 빈 배열을 만듦
+    - 반복할 숫자만큼 x를 곱해줌
+    - x의 값이 n의 베수만큼 곱해진 배열 결과 값 출력
 ## 3. 문자열
 ### 1) [문자열 내 마음대로 정렬하기](../code/StringControll/StringChooseSort.kt)
 - 접근방법
